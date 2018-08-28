@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F910D75B-D98A-4641-87E0-21389A0012E7}</ProjectGuid>
+    <ProjectGuid>{23829756-CE72-49F1-B7EE-7289453DD4AE}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Clase_guia</RootNamespace>
-    <AssemblyName>Clase guia</AssemblyName>
+    <RootNamespace>Ejercicio_3</RootNamespace>
+    <AssemblyName>Ejercicio 3</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Automovil.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
