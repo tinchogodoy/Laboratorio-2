@@ -1,0 +1,7 @@
+D:\Clase guia\Ejercico 14\bin\Debug\Ejercico 14.exe.config
+D:\Clase guia\Ejercico 14\bin\Debug\Ejercico 14.exe
+D:\Clase guia\Ejercico 14\bin\Debug\Ejercico 14.pdb
+D:\Clase guia\Ejercico 14\obj\Debug\Ejercico 14.csprojAssemblyReference.cache
+D:\Clase guia\Ejercico 14\obj\Debug\Ejercico 14.csproj.CoreCompileInputs.cache
+D:\Clase guia\Ejercico 14\obj\Debug\Ejercico 14.exe
+D:\Clase guia\Ejercico 14\obj\Debug\Ejercico 14.pdb
