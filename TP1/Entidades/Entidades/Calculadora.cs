@@ -8,23 +8,36 @@ namespace Entidades
 {
     class Calculadora
     {
-        public static double Operar(Numero numUno, Numero numDos, string operador)
+        public object Operador { get; private set; }
+
+        public double Operar(Numero numUno, Numero numDos, string operador)
         {
-            
+            double retorno = 0;
+            switch (ValidarOperador(operador))
+            {
+                case "+":
+                    retorno = numUno + numDos;
+                    break;
+                case "-":
+                    retorno = numUno - numDos;
+                    break;
+                case "*":
+                    retorno = numUno * numDos;
+                    break;
+                case "/":
+                    retorno = numUno / numDos;
+                    break;
+            }
+            return retorno;
         }
-
-        private string ValidarOperador(string operador)
+        private static string ValidarOperador(string operador)
         {
-            if ( operador == - || operador == / || operador == *)
+            string retorno = "+";
+            if ( operador == "-" || operador == "/" || operador == "*" || operador == "+")
             {
-
+                retorno = operador;
             }
-            else
-            {
-                operador = "+";
-                return operador;
-            }
+            return operador;
         }
-
     }
 }
