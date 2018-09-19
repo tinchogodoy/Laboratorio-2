@@ -32,7 +32,7 @@
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnConvertirABinario = new System.Windows.Forms.Button();
-            this.convertirADecimal = new System.Windows.Forms.Button();
+            this.btnConvertirADecimal = new System.Windows.Forms.Button();
             this.txtNumUno = new System.Windows.Forms.TextBox();
             this.txtNumDos = new System.Windows.Forms.TextBox();
             this.cmbOperador = new System.Windows.Forms.ComboBox();
@@ -57,6 +57,7 @@
             this.btnLimpiar.TabIndex = 1;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnCerrar
             // 
@@ -66,6 +67,7 @@
             this.btnCerrar.TabIndex = 2;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnConvertirABinario
             // 
@@ -75,16 +77,17 @@
             this.btnConvertirABinario.TabIndex = 3;
             this.btnConvertirABinario.Text = "Convertir a Binario";
             this.btnConvertirABinario.UseVisualStyleBackColor = true;
+            this.btnConvertirABinario.Click += new System.EventHandler(this.btnConvertirABinario_Click);
             // 
-            // convertirADecimal
+            // btnConvertirADecimal
             // 
-            this.convertirADecimal.Location = new System.Drawing.Point(442, 298);
-            this.convertirADecimal.Name = "convertirADecimal";
-            this.convertirADecimal.Size = new System.Drawing.Size(137, 23);
-            this.convertirADecimal.TabIndex = 4;
-            this.convertirADecimal.Text = "Convertir a Decimal";
-            this.convertirADecimal.UseVisualStyleBackColor = true;
-            this.convertirADecimal.Click += new System.EventHandler(this.button5_Click);
+            this.btnConvertirADecimal.Location = new System.Drawing.Point(442, 298);
+            this.btnConvertirADecimal.Name = "btnConvertirADecimal";
+            this.btnConvertirADecimal.Size = new System.Drawing.Size(137, 23);
+            this.btnConvertirADecimal.TabIndex = 4;
+            this.btnConvertirADecimal.Text = "Convertir a Decimal";
+            this.btnConvertirADecimal.UseVisualStyleBackColor = true;
+            this.btnConvertirADecimal.Click += new System.EventHandler(this.button5_Click);
             // 
             // txtNumUno
             // 
@@ -104,6 +107,11 @@
             // cmbOperador
             // 
             this.cmbOperador.FormattingEnabled = true;
+            this.cmbOperador.Items.AddRange(new object[] {
+            "+",
+            "-",
+            "*",
+            "/"});
             this.cmbOperador.Location = new System.Drawing.Point(384, 155);
             this.cmbOperador.Name = "cmbOperador";
             this.cmbOperador.Size = new System.Drawing.Size(75, 21);
@@ -127,7 +135,7 @@
             this.Controls.Add(this.cmbOperador);
             this.Controls.Add(this.txtNumDos);
             this.Controls.Add(this.txtNumUno);
-            this.Controls.Add(this.convertirADecimal);
+            this.Controls.Add(this.btnConvertirADecimal);
             this.Controls.Add(this.btnConvertirABinario);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnLimpiar);
@@ -150,7 +158,7 @@
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button btnConvertirABinario;
-        private System.Windows.Forms.Button convertirADecimal;
+        private System.Windows.Forms.Button btnConvertirADecimal;
         private System.Windows.Forms.TextBox txtNumUno;
         private System.Windows.Forms.TextBox txtNumDos;
         private System.Windows.Forms.ComboBox cmbOperador;

@@ -12,7 +12,15 @@ namespace Entidades
 
         private double ValidarNumero(string strNumero)
         {
-            double validado = Convert.ToDouble(strNumero);
+            double validado;
+            if (strNumero != "")
+            {
+                validado = Convert.ToDouble(strNumero);
+            }
+            else
+            {
+                validado = Convert.ToDouble("0");
+            }
             return validado;
         }
 
@@ -33,31 +41,35 @@ namespace Entidades
             this.SetNumero = numero;
         }
 
-        public string BinarioDecimal(string binario)
+        public static string BinarioDecimal(string binario)
         {
-            double numero = 0;
-            for(int i = 0; i < binario.Length; i++)
+            double numero = 0, exponente = 0;
+            for(int i = binario.Length-1; i >= 0; i--)
             {
                 if (binario[i] == '0' || binario[i] == '1')
                 {
-                    if(binario[i] == '1')
-                        numero += Math.Pow(2, i);
+                    if (binario[i] == '1')
+                    {
+                        numero = numero + Math.Pow(2, exponente);
+                    }
+                        
                 }
                 else
                 {
                     return string.Format("Valor Invalido");
                 }
+                exponente++;
             }
             return numero.ToString();
         }
 
-        public string DecimalBinario(string numeroStr)
+        public static string DecimalBinario(string numeroStr)
         {
             double numero = Convert.ToDouble(numeroStr);
             return DecimalBinario(numero);
         }
 
-        public string DecimalBinario(double numero)
+        public static string DecimalBinario(double numero)
         {
             string binario = "";
             while (numero > 0)
@@ -75,43 +87,40 @@ namespace Entidades
             return binario;
         }
 
-        public static double operator -(Numero n1, Numero n2)
+        public static double operator -(Numero nUno, Numero nDos)
         {
-            if (!(n1 is null) && !(n2 is null))
+            if (!(nUno is null) && !(nDos is null))
             {
-                return n1.numero - n2.numero;
+                return nUno.numero - nDos.numero;
+            }
+            return 0;
+        }
+
+        public static double operator +(Numero nUno, Numero nDos)
+        {
+            if (!(nUno is null) && !(nDos is null))
+            {
+                return nUno.numero + nDos.numero;
+            }
+            return 0;
+        }
+
+        public static double operator /(Numero nUno, Numero nDos)
+        {
+            if (!(nUno is null) && !(nDos is null))
+            {
+                return nUno.numero / nDos.numero;
             }
 
             return 0;
         }
 
-        public static double operator +(Numero n1, Numero n2)
+        public static double operator *(Numero nUno, Numero nDos)
         {
-            if (!(n1 is null) && !(n2 is null))
+            if (!(nUno is null) && !(nDos is null))
             {
-                return n1.numero + n2.numero;
+                return nUno.numero * nDos.numero;
             }
-
-            return 0;
-        }
-
-        public static double operator /(Numero n1, Numero n2)
-        {
-            if (!(n1 is null) && !(n2 is null))
-            {
-                return n1.numero / n2.numero;
-            }
-
-            return 0;
-        }
-
-        public static double operator *(Numero n1, Numero n2)
-        {
-            if (!(n1 is null) && !(n2 is null))
-            {
-                return n1.numero * n2.numero;
-            }
-
             return 0;
         }
         
