@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    class Calculadora
+    public class Calculadora
     {
         public object Operador { get; private set; }
 
-        public double Operar(Numero numUno, Numero numDos, string operador)
+        public static double Operar(Numero numUno, Numero numDos, string operador)
         {
             double retorno = 0;
             switch (ValidarOperador(operador))

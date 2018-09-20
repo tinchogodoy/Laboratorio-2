@@ -23,12 +23,12 @@ namespace Entidades
                 this.numero = ValidarNumero(value);
             }
         }
-        private Numero(double numero)
+        public Numero(double numero)
         {
             this.numero = numero;
         }
 
-        private Numero(string numero)
+        public Numero(string numero)
         {
             this.SetNumero = numero;
         }

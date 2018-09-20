@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidades;
 
 namespace MiCalculadora
 {
@@ -29,6 +30,30 @@ namespace MiCalculadora
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbOperador_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNumUno_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOperar_Click(object sender, EventArgs e)
+        {
+            double resultado;
+            Numero numeroUno = new Numero(txtNumUno.Text);
+            Numero numeroDos = new Numero(txtNumDos.Text);
+            resultado = Calculadora.Operar(numeroUno, numeroDos, cmbOperador.Text);
+            lblResultado.Text = resultado.ToString();
         }
     }
 }
