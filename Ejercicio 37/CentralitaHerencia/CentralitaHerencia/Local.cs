@@ -36,6 +36,7 @@ namespace CentralitaHerencia
 
         public string Mostrar()
         {
+            
             StringBuilder sb = new StringBuilder();// StringBuilder
             sb.AppendFormat("Duracion: {0} , Nuero Origen: {1} , numero destino {2}",this.Duracion, this.NroOrigen, this.NroDestino);
             
