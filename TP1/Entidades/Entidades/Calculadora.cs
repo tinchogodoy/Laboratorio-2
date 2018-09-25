@@ -33,11 +33,11 @@ namespace Entidades
         private static string ValidarOperador(string operador)
         {
             string retorno = "+";
-            if ( operador == "-" || operador == "/" || operador == "*" || operador == "+")
+            if ( operador == "-" || operador == "/" || operador == "*")
             {
                 retorno = operador;
             }
-            return operador;
+            return retorno;
         }
     }
 }
