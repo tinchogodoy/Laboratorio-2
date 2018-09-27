@@ -10,12 +10,13 @@ namespace CentralitaHerencia
     {
         protected float costo;
 
-        float CostoLlamada {
+        public float CostoLlamada
+        {
             get
             {
                 return this.CalcularCosto();
             }
-          }
+         }
 
         private float CalcularCosto()
         {

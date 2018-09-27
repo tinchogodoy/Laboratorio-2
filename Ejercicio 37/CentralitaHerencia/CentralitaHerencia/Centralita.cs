@@ -24,10 +24,8 @@ namespace CentralitaHerencia
         public float GananciasPorLocal
         {
             get
-            {
-                float ganancia = 0;
-                    
-                return ganancia;
+            {                
+                return this.CalcularGanancia(Llamada.TipoLlamada.Local);
             }
 
         }
@@ -35,16 +33,14 @@ namespace CentralitaHerencia
         {
             get
             {
-                float ganancia = 0;
-                return ganancia;
+                return this.CalcularGanancia(Llamada.TipoLlamada.Provincial);
             }
         }
         public float GananciasPorTotal
         {
             get
             {
-                float ganancia = 0;
-                return ganancia;
+                return this.CalcularGanancia(Llamada.TipoLlamada.Todas);
             }
         }
 
@@ -52,25 +48,29 @@ namespace CentralitaHerencia
         {
             get
             {
-                List<Llamada> llamadas = new List<Llamada>();
-                listaDeLlamadas = llamadas;
-                             
                 return listaDeLlamadas;
             }
         }
 
-        private float CalcularGanancia()
+        private float CalcularGanancia(Llamada.TipoLlamada tipo)
         {
             float ganancia = 0;
-            switch (Llamada.TipoLlamada.Local)
+            foreach(Llamada llamada in this.listaDeLlamadas)
+            switch (tipo)
             {
 
                 case Llamada.TipoLlamada.Local:
-
+                    if(llamada is Local)
+                    {
+                        ganancia += ((Local)llamada).CostoLlamada;
+                    }
                 break;
                 case Llamada.TipoLlamada.Provincial:
-
-                break;
+                    if (llamada is Provincial)
+                    {
+                        ganancia += ((Provincial)llamada).CostoLlamada;
+                    }
+                    break;
                 case Llamada.TipoLlamada.Todas:
 
                 break;

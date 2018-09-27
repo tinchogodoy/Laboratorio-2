@@ -17,6 +17,15 @@ namespace CentralitaHerencia
 
         protected Franja franjaHoraria;
 
+        public float CostoLlamada
+        {
+            get
+            {
+                return this.CalcularCosto();
+            }
+        }
+
+
         private float CalcularCosto()
         {
             float precio = 0;
