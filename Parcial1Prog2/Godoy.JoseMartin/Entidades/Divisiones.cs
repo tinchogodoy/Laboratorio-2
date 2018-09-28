@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Class1
+    public enum Divisiones
     {
-
+        A,
+        B,
+        C,
+        D,
+        E
     }
 }
