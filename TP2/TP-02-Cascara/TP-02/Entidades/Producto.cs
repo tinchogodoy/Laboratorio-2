@@ -11,13 +11,20 @@ namespace Entidades_2018
     /// </summary>
     public abstract class Producto
     {
-        enum EMarca
+        public enum EMarca
         {
             Serenisima, Campagnola, Arcor, Ilolay, Sancor, Pepsico
         }
         private EMarca marca;
         private string codigoDeBarras;
         private ConsoleColor colorPrimarioEmpaque;
+
+        public Producto(string patente, EMarca marca, ConsoleColor color)
+        {
+            this.codigoDeBarras = patente;
+            this.marca = marca;
+            this.colorPrimarioEmpaque = color;
+        }
 
         /// <summary>
         /// Retornara cantidad de calorias
@@ -28,9 +35,16 @@ namespace Entidades_2018
         /// Publica todos los datos del Producto.
         /// </summary>
         /// <returns></returns>
-        public string Mostrar()
+        public virtual string Mostrar()
         {
-            return (string)this;
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendFormat("CODIGO DE BARRAS: {0}\r\n", this.codigoDeBarras);
+            sb.AppendFormat("MARCA          : {0}\r\n", this.marca.ToString());
+            sb.AppendFormat("COLOR EMPAQUE  : {0}\r\n", this.colorPrimarioEmpaque.ToString());
+            sb.AppendLine("---------------------");
+
+            return sb.ToString();
         }
 
         public static explicit operator string(Producto p)
