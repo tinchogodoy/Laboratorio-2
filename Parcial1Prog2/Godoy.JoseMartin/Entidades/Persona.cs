@@ -44,7 +44,7 @@ namespace Entidades
         public virtual string ExponerDatos()
         {
             StringBuilder e = new StringBuilder();
-            e.AppendFormat("Nombre: {0}, Apellido: {1}, Division: {2}.",Nombre, Apellido, Documento);
+            e.AppendFormat("Nombre: {0}, Apellido: {1}, Division: {2}.", Nombre, Apellido, Documento);
             return e.ToString();
         }
 
@@ -52,7 +52,10 @@ namespace Entidades
         {
             this.nombre = nombre;
             this.apellido = apellido;
-            this.documento = documento;
+            if (this.ValidarDocumentacion(documento))
+            {
+                this.documento = documento;
+            }
         }
 
 

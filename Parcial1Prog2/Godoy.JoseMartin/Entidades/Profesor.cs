@@ -40,7 +40,7 @@ namespace Entidades
         protected override bool ValidarDocumentacion(string doc)
         {
             // Creo el patrón indicando que tendrá 2 dígito (d{2}) luego guión, luego 4 dígitos, luego guión
-            string patron = "^\\d{2}-\\d{4}-$";
+            string patron = "^\\d{2}-\\d{4}-\\d{1}-$";
             if (Regex.IsMatch(doc, patron))
             {
                 return true;

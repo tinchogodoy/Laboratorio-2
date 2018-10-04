@@ -11,7 +11,7 @@ namespace VistaConsola
     {
         static void Main(string[] args)
         {
-           /* // Genero un curso nuevo
+            // Genero un curso nuevo
             Curso curso = new Curso(2, Divisiones.A, new Profesor("Fede", "Dávila", "12345678", new
             DateTime(2015, 03, 20)));
             // Genero alumnos...
@@ -28,9 +28,7 @@ namespace VistaConsola
             curso += a5;
             // Imprimo los datos del curso
             Console.WriteLine((string)curso);
-            Console.ReadKey();*/
-
-            
+            Console.ReadKey();
 
 
         }

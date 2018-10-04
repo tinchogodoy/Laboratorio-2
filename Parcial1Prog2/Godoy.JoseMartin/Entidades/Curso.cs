@@ -61,14 +61,13 @@ namespace Entidades
             return !(c==a);
         }
 
-        public static bool operator +(Curso c, Alumno a)//El operador + entre Curso y Alumno agregará al alumno al curso siempre y cuando su Año y División coincidan. 
+        public static Curso operator +(Curso c, Alumno a)//El operador + entre Curso y Alumno agregará al alumno al curso siempre y cuando su Año y División coincidan. 
         {
             if (c.AnioDivision == a.AnioDivision)
             {
                 c.alumnos.Add(a);
-                return true;
             }
-            return false;
+            return c;
         }
 
     }
