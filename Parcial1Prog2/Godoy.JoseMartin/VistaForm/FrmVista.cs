@@ -25,7 +25,7 @@ namespace VistaForm
         private void Form1_Load(object sender, EventArgs e)
         {
             cmbDivisionCurso.DataSource = Enum.GetValues(typeof(Divisiones));
-
+            cmbDivision.DataSource = Enum.GetValues(typeof(Divisiones));
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -45,7 +45,18 @@ namespace VistaForm
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            short anio = (short)this.nudAnio.Value;
 
+            Alumno alumno = new Alumno(txtNombre.Text,txtApellido.Text,txtDocumento.Text,anio,division);
+            if (alumno is null)
+            {
+                MessageBox.Show("", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show("Alumno agregado con Exito!");
+            }
+            curso += alumno;
         }
 
         private void cmbDivisionCurso_SelectedIndexChanged(object sender, EventArgs e)
@@ -57,7 +68,7 @@ namespace VistaForm
         private void cmbDivision_SelectedIndexChanged(object sender, EventArgs e)
         {
             Enum.TryParse<Divisiones>(cmbDivisionCurso.SelectedValue.ToString(), out division);
-            txtNombreProfe.Text = division.ToString();
+            
         }
 
         private void txtNombreProfe_TextChanged(object sender, EventArgs e)
@@ -72,21 +83,32 @@ namespace VistaForm
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
-            short anio;
-
+            short anio = (short)this.nudAnioCurso.Value;
             string nombre = this.txtNombreProfe.Text;
             string apellido = this.txtApellidoProfe.Text;
             string doc = this.txtDocumentoProfe.Text;
-            if (!String.IsNullOrEmpty(nombre.Trim()) && !String.IsNullOrEmpty(apellido.Trim()) &&
-                short.TryParse(nudAnioCurso.Value.ToString(), out anio) && (anio > 2007 && anio < 2019))
-            {
+            DateTime fechaIngreso = this.dtpFechaIngreso.Value;
+           // if (!String.IsNullOrEmpty(nombre.Trim()) && !String.IsNullOrEmpty(apellido.Trim()) &&
+           //     short.TryParse(nudAnioCurso.Value.ToString(), out anio) && (anio > 2007 && anio < 2019))
+           // {
                 this.profe = new Profesor(nombre, apellido, doc);
                 curso = new Curso(anio, division,this.profe);
-                
-            }
+                if (curso is null)
+                {
+                    MessageBox.Show("", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Grupo Creado con Exito!");
+                }
+
+           // }
 
         }
 
-      
+        private void btnMostrar_Click(object sender, EventArgs e)
+        {
+            rtbDatos.Text = ((string)curso);
+        }
     }
 }

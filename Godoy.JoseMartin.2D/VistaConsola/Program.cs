@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Entidades;
+
 
 namespace VistaConsola
 {
@@ -10,12 +12,12 @@ namespace VistaConsola
     {
         static void Main(string[] args)
         {
-           /* Estacionamiento e = new Estacionamiento("UTN", 6);
+            Estacionamiento e = new Estacionamiento("UTN", 6);
             // Creación de Vehículos
             Console.WriteLine("MOTOS");
             Vehiculo m1 = new Moto("ASD123", 75, 4);
             Console.WriteLine(m1.ConsultarDatos());
-            Moto m2 = new Moto("ASDaa123", 175);
+            Moto m2 = new Moto("ASDaa123", 175, 2);
             Console.WriteLine(m2.ConsultarDatos());
             Moto m3 = new Moto("QWE312", 175, 4, 35);
             Console.WriteLine(m3.ConsultarDatos());
@@ -56,7 +58,7 @@ namespace VistaConsola
             Console.WriteLine("--------------------------------");
             Console.WriteLine((string)e);
             Console.ReadKey();
-            */
+            
         }
     }
 }

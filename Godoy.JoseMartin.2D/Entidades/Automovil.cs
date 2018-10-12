@@ -9,11 +9,11 @@ namespace Entidades
     public class Automovil : Vehiculo
     {
         private ConsoleColor color;
-        private int valorHora;
+        private static int valorHora;
 
-        private Automovil() 
+        static Automovil()
         {
-            this.valorHora = 50;
+            valorHora = 50;
         }
 
         public Automovil(string patente, ConsoleColor color) :base(patente)
@@ -21,9 +21,9 @@ namespace Entidades
             this.color = color;
         }
 
-        public Automovil(string patente, ConsoleColor color, int valorHora) : this(patente, color) 
+        public Automovil(string patente, ConsoleColor color, int valorHora) :this(patente, color) 
         {
-            this.valorHora = valorHora;
+           
         }
 
         public override string ConsultarDatos()

@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    class Estacionamiento
+    public class Estacionamiento
     {
         private int espacioDisponible;
         private string nombre;
         private List<Vehiculo> vehiculos;
 
-        private Estacionamiento()
+         Estacionamiento()
         {
-            vehiculos = new List<Vehiculo>();
+            this.vehiculos = new List<Vehiculo>();
         }
 
         public Estacionamiento(string nombre, int espacioDisponible)
@@ -47,22 +47,35 @@ namespace Entidades
             }
             return true;
         }
-
+        
         public static Estacionamiento operator +(Estacionamiento estacionamiento, Vehiculo vehiculo)
         {
             foreach(Vehiculo v in estacionamiento.vehiculos)
             {
-                if(v != vehiculo && v.Patente == vehiculo.Patente)
+                if(v == vehiculo )
                 {
-                    return estacionamiento.vehiculos.Add(vehiculo);
+                    return estacionamiento;
                 }
-                
             }
-
-            return 
+            estacionamiento.vehiculos.Add(vehiculo);
+            return estacionamiento;
         }
 
+        public static Estacionamiento operator -(Estacionamiento estacionamiento, Vehiculo vehiculo)
+        {
+            foreach (Vehiculo v in estacionamiento.vehiculos)
+            {
+                if (!(v == vehiculo && v.Patente == vehiculo.Patente))
+                {
+                    estacionamiento.vehiculos.Remove(vehiculo);
+                    return estacionamiento;
+                }
 
+            }
+            
+            return estacionamiento;
+
+        }
 
 
 

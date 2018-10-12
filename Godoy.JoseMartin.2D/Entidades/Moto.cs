@@ -10,11 +10,11 @@ namespace Entidades
     {
         private int cilindrada;
         private short ruedas;
-        private int valorHora;
+        private static int valorHora;
 
-        private Moto() 
+        static Moto() 
         {
-            this.valorHora = 30;
+            valorHora = 30;
         }
 
         public Moto(string patente, int cilindrada, short ruedas) : base(patente)
@@ -23,7 +23,7 @@ namespace Entidades
             this.ruedas = ruedas;
         }
 
-        public Moto(string patente,int cilindrada,short ruedas,int valorHora) : this()
+        public Moto(string patente,int cilindrada,short ruedas,int valorHora) : this(patente,cilindrada,ruedas)
         {
           
         }

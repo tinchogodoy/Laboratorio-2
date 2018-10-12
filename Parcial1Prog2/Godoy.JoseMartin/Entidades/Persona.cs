@@ -56,6 +56,10 @@ namespace Entidades
             {
                 this.documento = documento;
             }
+            else
+            {
+                this.documento = "XXXXXXXXX";
+            }
         }
 
 

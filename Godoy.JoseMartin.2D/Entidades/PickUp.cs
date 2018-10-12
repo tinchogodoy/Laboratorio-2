@@ -9,11 +9,11 @@ namespace Entidades
     public class PickUp : Vehiculo
     {
         private string modelo;
-        private int valorHora;
+        private static int valorHora;
 
-        private PickUp()
+        static PickUp()
         {
-            this.valorHora = 70;
+            valorHora = 70;
         }
 
         public PickUp(string patente, string modelo) : base(patente)
@@ -21,9 +21,9 @@ namespace Entidades
             this.modelo = modelo;
         }
 
-        public PickUp(string patente, string modelo, int valorHora) : this()
+        public PickUp(string patente, string modelo, int valorHora) : this(patente,modelo)
         {
-            this.modelo = modelo;
+ 
         }
 
         public override string ConsultarDatos()

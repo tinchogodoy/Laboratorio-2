@@ -35,14 +35,13 @@ namespace Entidades
 
         public override string ToString()
         {
-            return "";
-
+            return string.Format("Patente {0}", this.Patente);
         }
 
         public virtual string ImprimirTiket()
         {
-            StringBuilder sb = new StringBuilder();
-            //sb.AppendFormat(" {0}",);
+            StringBuilder sb = new StringBuilder();//datos del Vehiculo (reutilizar ToString) y la fecha y hora de ingreso. 
+            sb.AppendFormat(" Datos: {0}, {1}, ",this.ToString(),this.ingreso);
             return sb.ToString();
         }
 

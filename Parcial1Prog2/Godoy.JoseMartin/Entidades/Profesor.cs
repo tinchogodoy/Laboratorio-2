@@ -33,14 +33,14 @@ namespace Entidades
         public override string ExponerDatos()
         {
             StringBuilder ed = new StringBuilder();
-            ed.AppendFormat("Nombre: {0}, Apellido: {1}, Documento: {2}, Ingreso: {3}", this.Nombre, this.Apellido, this.Documento,this.fechaIngreso);
+            ed.AppendFormat("{0} {1}, Documento: {2}, Ingreso: {3}\n", this.Nombre, this.Apellido, this.Documento, this.fechaIngreso);
             return ed.ToString();
         }
 
         protected override bool ValidarDocumentacion(string doc)
         {
             // Creo el patrón indicando que tendrá 2 dígito (d{2}) luego guión, luego 4 dígitos, luego guión
-            string patron = "^\\d{2}-\\d{4}-\\d{1}-$";
+            string patron = "^\\d{8}$";
             if (Regex.IsMatch(doc, patron))
             {
                 return true;

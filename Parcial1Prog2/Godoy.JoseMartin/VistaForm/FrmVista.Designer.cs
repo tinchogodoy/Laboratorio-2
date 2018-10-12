@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gpbDatosCurso = new System.Windows.Forms.GroupBox();
+            this.txtDocumentoProfe = new System.Windows.Forms.MaskedTextBox();
             this.txtApellidoProfe = new System.Windows.Forms.TextBox();
             this.txtNombreProfe = new System.Windows.Forms.TextBox();
             this.nudAnioCurso = new System.Windows.Forms.NumericUpDown();
@@ -43,6 +44,7 @@
             this.lblDivisionCurso = new System.Windows.Forms.Label();
             this.lblAnioCurso = new System.Windows.Forms.Label();
             this.gpbDatosAlumnos = new System.Windows.Forms.GroupBox();
+            this.txtDocumento = new System.Windows.Forms.MaskedTextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.nudAnio = new System.Windows.Forms.NumericUpDown();
@@ -54,8 +56,6 @@
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.rtbDatos = new System.Windows.Forms.RichTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.gpbDatosCurso.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAnioCurso)).BeginInit();
             this.gpbDatosAlumnos.SuspendLayout();
@@ -64,7 +64,7 @@
             // 
             // gpbDatosCurso
             // 
-            this.gpbDatosCurso.Controls.Add(this.maskedTextBox1);
+            this.gpbDatosCurso.Controls.Add(this.txtDocumentoProfe);
             this.gpbDatosCurso.Controls.Add(this.txtApellidoProfe);
             this.gpbDatosCurso.Controls.Add(this.txtNombreProfe);
             this.gpbDatosCurso.Controls.Add(this.nudAnioCurso);
@@ -85,6 +85,14 @@
             this.gpbDatosCurso.TabStop = false;
             this.gpbDatosCurso.Text = "Datos Curso";
             this.gpbDatosCurso.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // txtDocumentoProfe
+            // 
+            this.txtDocumentoProfe.Location = new System.Drawing.Point(99, 152);
+            this.txtDocumentoProfe.Mask = "00000000";
+            this.txtDocumentoProfe.Name = "txtDocumentoProfe";
+            this.txtDocumentoProfe.Size = new System.Drawing.Size(205, 20);
+            this.txtDocumentoProfe.TabIndex = 23;
             // 
             // txtApellidoProfe
             // 
@@ -143,6 +151,7 @@
             this.btnMostrar.TabIndex = 10;
             this.btnMostrar.Text = "Mostrar";
             this.btnMostrar.UseVisualStyleBackColor = true;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
             // lblFechaIngreso
             // 
@@ -202,7 +211,7 @@
             // 
             // gpbDatosAlumnos
             // 
-            this.gpbDatosAlumnos.Controls.Add(this.maskedTextBox2);
+            this.gpbDatosAlumnos.Controls.Add(this.txtDocumento);
             this.gpbDatosAlumnos.Controls.Add(this.txtNombre);
             this.gpbDatosAlumnos.Controls.Add(this.txtApellido);
             this.gpbDatosAlumnos.Controls.Add(this.nudAnio);
@@ -219,6 +228,14 @@
             this.gpbDatosAlumnos.TabIndex = 1;
             this.gpbDatosAlumnos.TabStop = false;
             this.gpbDatosAlumnos.Text = "Datos Alumnos";
+            // 
+            // txtDocumento
+            // 
+            this.txtDocumento.Location = new System.Drawing.Point(111, 92);
+            this.txtDocumento.Mask = "00-0000-0";
+            this.txtDocumento.Name = "txtDocumento";
+            this.txtDocumento.Size = new System.Drawing.Size(205, 20);
+            this.txtDocumento.TabIndex = 24;
             // 
             // txtNombre
             // 
@@ -313,23 +330,6 @@
             this.rtbDatos.TabIndex = 2;
             this.rtbDatos.Text = "";
             // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(99, 152);
-            this.maskedTextBox1.Mask = "00-0000-0";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(205, 20);
-            this.maskedTextBox1.TabIndex = 23;
-           
-            // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(111, 92);
-            this.maskedTextBox2.Mask = "00-0000-0";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(205, 20);
-            this.maskedTextBox2.TabIndex = 24;
-            // 
             // FrmVista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -379,8 +379,8 @@
         private System.Windows.Forms.ComboBox cmbDivision;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.RichTextBox rtbDatos;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox txtDocumentoProfe;
+        private System.Windows.Forms.MaskedTextBox txtDocumento;
     }
 }
 

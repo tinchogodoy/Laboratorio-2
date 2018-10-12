@@ -38,7 +38,7 @@ namespace Entidades
         public static explicit operator string (Curso c)// te permite castear a string a curso, siempre public static
         {
             StringBuilder ad = new StringBuilder();
-            ad.AppendFormat("Año: {0}, Division: {1}, Profesor: {2}", c.anio,c.division, c.profesor );
+            ad.AppendFormat("CURSO: {0}, Profesor: {1}", c.AnioDivision, c.profesor.ExponerDatos());
 
             foreach(Alumno alumno in c.alumnos)
             {
