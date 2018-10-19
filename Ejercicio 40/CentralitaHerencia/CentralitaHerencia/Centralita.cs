@@ -55,7 +55,7 @@ namespace CentralitaHerencia
         private float CalcularGanancia(Llamada.TipoLlamada tipo)
         {
             float ganancia = 0;
-            float gananciaPorTotal = 0;
+            
             foreach(Llamada llamada in this.listaDeLlamadas)
             switch (tipo)
             {

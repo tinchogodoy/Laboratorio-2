@@ -25,14 +25,14 @@ namespace CentralitaHerencia
             return precio;
         }
 
-        public Local(Llamada llamada, float costo) : base(llamada.Duracion,llamada.NroDestino,llamada.NroOrigen)//el constructor base de otra clase
-        {
-            this.costo = costo; 
-        }
-
-        public Local(string origen, float duracion, string destino, float costo) :  this(new Llamada(duracion,destino,origen),costo)
+        public Local(Llamada llamada, float costo) : this(llamada.NroOrigen,llamada.Duracion,llamada.NroDestino,costo)//el constructor base de otra clase
         {
             
+        }
+
+        public Local(string origen, float duracion, string destino, float costo) : base(duracion, destino, origen)
+        {
+            this.costo = costo;
         }
 
         public new string Mostrar()
