@@ -1,7 +1,0 @@
-D:\Clase guia\Clase guia\bin\Debug\Clase guia.exe.config
-D:\Clase guia\Clase guia\bin\Debug\Clase guia.exe
-D:\Clase guia\Clase guia\bin\Debug\Clase guia.pdb
-D:\Clase guia\Clase guia\obj\Debug\Clase guia Ejercicio 1.csprojAssemblyReference.cache
-D:\Clase guia\Clase guia\obj\Debug\Clase guia Ejercicio 1.csproj.CoreCompileInputs.cache
-D:\Clase guia\Clase guia\obj\Debug\Clase guia.exe
-D:\Clase guia\Clase guia\obj\Debug\Clase guia.pdb
