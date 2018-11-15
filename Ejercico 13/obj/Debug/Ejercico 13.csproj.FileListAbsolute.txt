@@ -1,7 +1,0 @@
-D:\Clase guia\Ejercico 13\obj\Debug\Ejercico 13.csprojAssemblyReference.cache
-D:\Clase guia\Ejercico 13\obj\Debug\Ejercico 13.csproj.CoreCompileInputs.cache
-D:\Clase guia\Ejercico 13\bin\Debug\Ejercico 13.exe.config
-D:\Clase guia\Ejercico 13\bin\Debug\Ejercico 13.exe
-D:\Clase guia\Ejercico 13\bin\Debug\Ejercico 13.pdb
-D:\Clase guia\Ejercico 13\obj\Debug\Ejercico 13.exe
-D:\Clase guia\Ejercico 13\obj\Debug\Ejercico 13.pdb

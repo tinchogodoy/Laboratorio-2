@@ -1,7 +1,0 @@
-D:\Clase guia\Ejercicio11bis\obj\Debug\Ejercicio11bis.csprojAssemblyReference.cache
-D:\Clase guia\Ejercicio11bis\obj\Debug\Ejercicio11bis.csproj.CoreCompileInputs.cache
-D:\Clase guia\Ejercicio11bis\bin\Debug\Ejercicio11bis.exe.config
-D:\Clase guia\Ejercicio11bis\bin\Debug\Ejercicio11bis.exe
-D:\Clase guia\Ejercicio11bis\bin\Debug\Ejercicio11bis.pdb
-D:\Clase guia\Ejercicio11bis\obj\Debug\Ejercicio11bis.exe
-D:\Clase guia\Ejercicio11bis\obj\Debug\Ejercicio11bis.pdb
